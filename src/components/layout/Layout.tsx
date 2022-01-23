@@ -13,7 +13,7 @@ const Layout = ({ children }: Props) => {
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>{children}</main>
+      <main className="text-[#353D40]">{children}</main>
     </>
   );
 };
