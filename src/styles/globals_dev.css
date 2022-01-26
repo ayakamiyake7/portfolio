@@ -502,6 +502,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.m-8 {
+  margin: 2rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -511,12 +515,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 2rem;
 }
 
-.block {
-  display: block;
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-6 {
@@ -527,8 +547,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1.5rem;
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -545,24 +573,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.font-gothic {
+  font-family: Century Gothic, sans-serif;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .text-xl {
@@ -570,8 +596,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
 }
 
 .text-yellow {
@@ -582,6 +617,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-\[\#353D40\] {
   --tw-text-opacity: 1;
   color: rgb(53 61 64 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -600,12 +640,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
-  .sm\:block {
-    display: block;
+  .sm\:hidden {
+    display: none;
   }
 }
 
 @media (min-width: 768px) {
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -613,13 +657,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:flex {
     display: flex;
   }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:block {
-    display: block;
-  }
-
   .lg\:flex {
     display: flex;
   }
