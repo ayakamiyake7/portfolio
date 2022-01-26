@@ -10,8 +10,7 @@ module.exports = {
         yellow: "#F2B138",
       },
       fontFamily: {
-        Futura: ["Futura", "sans-serif"],
-        Helvetica: ["Helvetica", "sans-serif"],
+        gothic: ["Century Gothic", "sans-serif"],
       },
     },
   },
