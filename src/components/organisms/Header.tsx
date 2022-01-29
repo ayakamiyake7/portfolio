@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="container mx-auto py-8 flex justify-between items-center">
+    <header className="container mx-auto py-8 flex justify-between items-center px-4 p-0">
       <a
         href="/"
         className="text-yellow fontFamily-futura text-xl hover:opacity-80 transition-all"
