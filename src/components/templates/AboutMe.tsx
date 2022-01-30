@@ -1,13 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import ProfileImage from "../../../public/images/image-profile.png";
+import SectionTitle from "../atoms/SectionTitle";
 
 const AboutMe = () => {
   return (
     <>
       <section className="container mx-auto mb-20 px-4 md:px-0 md:flex md:justify-between">
         <div className="w-full md:w-3/5 mb-10">
-          <h2>About me</h2>
+          <SectionTitle title="About me" />
           <p className="tracking-widest text-base leading-8 mb-6 md:text-lg">
             I’m a front-end developer from Japan, currently based in London. In
             the past, I have worked at web design companies and created some web

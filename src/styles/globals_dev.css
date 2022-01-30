@@ -616,6 +616,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-to: #BC98BF;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -679,6 +683,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold {
@@ -839,6 +858,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: -2.5rem;
 }
 
+.after\:-bottom-1::after {
+  content: var(--tw-content);
+  bottom: -0.25rem;
+}
+
 .after\:-z-10::after {
   content: var(--tw-content);
   z-index: -10;
@@ -864,6 +888,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 4rem;
 }
 
+.after\:h-1::after {
+  content: var(--tw-content);
+  height: 0.25rem;
+}
+
+.after\:h-px::after {
+  content: var(--tw-content);
+  height: 1px;
+}
+
 .after\:w-64::after {
   content: var(--tw-content);
   width: 16rem;
@@ -872,6 +906,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .after\:w-px::after {
   content: var(--tw-content);
   width: 1px;
+}
+
+.after\:w-16::after {
+  content: var(--tw-content);
+  width: 4rem;
+}
+
+.after\:w-12::after {
+  content: var(--tw-content);
+  width: 3rem;
 }
 
 .after\:bg-yellow::after {
@@ -936,6 +980,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .md\:after\:absolute::after {
