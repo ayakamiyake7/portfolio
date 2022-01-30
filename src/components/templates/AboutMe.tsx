@@ -3,6 +3,7 @@ import Image from "next/image";
 import ProfileImage from "../../../public/images/image-profile.png";
 import SectionTitle from "../atoms/SectionTitle";
 import Title from "../atoms/Title";
+import Button from "../atoms/Button";
 
 const AboutMe = () => {
   return (
@@ -46,7 +47,7 @@ const AboutMe = () => {
           <div className="mb-4 relative after:w-64 after:h-64 after:bg-yellow after:absolute after:-bottom-3 md:after:-bottom-2 after:left-0 md:after:left-5 after:-right-10 md:after:right-0 after:m-auto after:-z-10">
             <Image src={ProfileImage} alt="Ayaka Miyake" className="" />
           </div>
-          button
+          <Button name="Download CV" />
         </div>
       </section>
     </>
