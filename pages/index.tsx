@@ -7,10 +7,8 @@ import MainVisual from "../src/components/templates/MainVisual";
 export default function Home() {
   return (
     <Layout>
-      <Header />
       <MainVisual />
       <AboutMe />
-      <Footer />
     </Layout>
   );
 }
