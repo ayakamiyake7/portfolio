@@ -939,6 +939,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: 2.5rem;
   }
 
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -985,6 +989,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .md\:after\:absolute::after {
