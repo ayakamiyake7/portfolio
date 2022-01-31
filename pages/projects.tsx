@@ -2,6 +2,7 @@ import Image from "next/image";
 import Layout from "../src/components/layout/Layout";
 import ProjectsTopImage from "../public/images/image-product-01.png";
 import Category from "../src/components/atoms/Category";
+import ProjectsContent from "../src/components/templates/ProjectsContent";
 
 export default function Projects() {
   return (
@@ -17,6 +18,7 @@ export default function Projects() {
           />
         </div>
         <Category />
+        <ProjectsContent />
       </section>
     </Layout>
   );
