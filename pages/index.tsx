@@ -1,11 +1,14 @@
 import Layout from "../src/components/layout/Layout";
-import Header from "../src/components/organisms/Header";
+import AboutMe from "../src/components/templates/AboutMe";
+import MainVisual from "../src/components/templates/MainVisual";
+import Projects from "../src/components/templates/Projects";
 
 export default function Home() {
   return (
     <Layout>
-      <Header />
-      <h1 className="text-3xl font-bold underline text-yellow">Hello world!</h1>
+      <MainVisual />
+      <AboutMe />
+      <Projects />
     </Layout>
   );
 }

@@ -8,7 +8,7 @@ const Header = () => {
   };
 
   return (
-    <header className="container mx-auto py-8 md:flex md:justify-between md:items-center">
+    <header className="container mx-auto py-8 px-4 md:px-0 md:flex md:justify-between md:items-center">
       <a
         href="/"
         className="text-yellow text-2xl font-bold hover:opacity-80 transition-all"
