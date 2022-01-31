@@ -547,6 +547,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.25rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .block {
   display: block;
 }
@@ -585,6 +589,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-8 {
   width: 2rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-3\/5 {
+  width: 60%;
 }
 
 .transform {
@@ -1047,6 +1063,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
+  .md\:order-2 {
+    order: 2;
+  }
+
+  .md\:order-1 {
+    order: 1;
+  }
+
   .md\:mb-10 {
     margin-bottom: 2.5rem;
   }
@@ -1057,6 +1081,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:mb-12 {
     margin-bottom: 3rem;
+  }
+
+  .md\:mr-4 {
+    margin-right: 1rem;
+  }
+
+  .md\:ml-4 {
+    margin-left: 1rem;
   }
 
   .md\:block {
@@ -1085,6 +1117,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:w-\[480px\] {
     width: 480px;
+  }
+
+  .md\:w-\[420px\] {
+    width: 420px;
+  }
+
+  .md\:w-40 {
+    width: 10rem;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
   }
 
   .md\:justify-center {
