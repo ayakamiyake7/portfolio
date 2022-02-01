@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="py-8">
       <div className="md:flex md:justify-center md:mb-10 px-4 lg:p-0 hidden">
         <a
           href="https://www.linkedin.com/in/ayaka-miyake/"
