@@ -6,7 +6,7 @@ import Title from "../atoms/Title";
 const ProjectsContent = () => {
   return (
     <>
-      <section className="container mx-auto mb-16 px-4 md:px-0 md:flex md:justify-between">
+      <section className="mt-8 md:px-0 md:flex md:justify-between">
         <div className="md:w-1/2 md:mr-4 mb-4">
           <Image src={ProjectsContentImage} alt="" layout="responsive" />
         </div>
@@ -24,7 +24,7 @@ const ProjectsContent = () => {
       </section>
 
       {/* if the section is last, need to remove mb-16 */}
-      <section className="container mx-auto mb-16 px-4 md:px-0 md:flex md:justify-between">
+      <section className="mt-16 md:px-0 md:flex md:justify-between">
         <div className="md:w-1/2 md:ml-4 mb-4 md:order-2">
           <Image src={ProjectsContentImage} alt="" layout="responsive" />
         </div>
