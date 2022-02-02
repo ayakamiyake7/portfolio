@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link as Scroll, ScrollLink } from "react-scroll";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -63,12 +64,12 @@ const Header = () => {
       </span>
 
       <nav className="md:flex hidden">
-        <a
+        <Scroll
           className="md:block font-bold text-lg hover:opacity-80 transition-all mr-8"
-          href="#aboutMe"
+          to="aboutMe"
         >
           About me
-        </a>
+        </Scroll>
         <a
           className="md:block font-bold text-lg hover:opacity-80 transition-all"
           href="#project"
@@ -173,12 +174,12 @@ const Header = () => {
               </svg>
             </a>
           </div>
-          <a
+          <Scroll
             className="text-white tracking-widest mt-24 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
-            href="#aboutMe"
+            href="/"
           >
             Home
-          </a>
+          </Scroll>
           <a
             className="text-white tracking-widest mt-20 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
             href="#aboutMe"

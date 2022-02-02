@@ -7,7 +7,10 @@ import Title from "../atoms/Title";
 const AboutMe = () => {
   return (
     <>
-      <section className="container mx-auto mt-20 px-4 md:px-0 md:flex md:justify-between">
+      <section
+        id="aboutMe"
+        className="container mx-auto mt-20 px-4 md:px-0 md:flex md:justify-between"
+      >
         <div className="w-full md:w-3/5 mb-10 md:mb-0">
           <SectionTitle title="About me" />
           <p className="tracking-widest text-base leading-8 mt-8 mb-6 md:text-lg">
