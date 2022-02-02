@@ -3,7 +3,6 @@ import Image from "next/image";
 import ProfileImage from "../../../public/images/image-profile.png";
 import SectionTitle from "../atoms/SectionTitle";
 import Title from "../atoms/Title";
-import Button from "../atoms/Button";
 
 const AboutMe = () => {
   return (
@@ -227,10 +226,17 @@ const AboutMe = () => {
           </ul>
         </div>
         <div className="text-center">
-          <div className="mb-6 relative after:w-64 after:h-64 after:bg-yellow after:absolute after:-bottom-3 md:after:-bottom-2 after:left-0 md:after:left-5 after:-right-10 md:after:right-0 after:m-auto after:-z-10">
+          <div className="relative after:w-64 after:h-64 after:bg-yellow after:absolute after:-bottom-3 md:after:-bottom-2 after:left-0 md:after:left-5 after:-right-10 md:after:right-0 after:m-auto after:-z-10">
             <Image src={ProfileImage} alt="Ayaka Miyake" className="" />
           </div>
-          <Button name="Download CV" />
+          <a
+            href="./CV_ayaka_miyake.pdf"
+            target="_blank"
+            rel="noopener"
+            className="text-navy font-bold text-lg mx-auto mt-8 block rounded-lg border-4 border-navy w-4/5 py-2 px-6 hover:bg-navy hover:text-white transition"
+          >
+            Download CV
+          </a>
         </div>
       </section>
     </>
