@@ -1,5 +1,6 @@
+import Link from "next/link";
 import React, { useState } from "react";
-import { Link as Scroll, ScrollLink } from "react-scroll";
+import { Link as Scroll } from "react-scroll";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,12 +10,11 @@ const Header = () => {
 
   return (
     <header className="container mx-auto py-8 px-4 md:px-0 md:flex md:justify-between md:items-center">
-      <a
-        href="/"
-        className="text-yellow text-2xl font-bold hover:opacity-80 transition-all"
-      >
-        Ayaka Miyake
-      </a>
+      <Link href="/">
+        <a className="text-yellow text-2xl font-bold hover:opacity-80 transition-all">
+          Ayaka Miyake
+        </a>
+      </Link>
 
       <span
         className="md:hidden absolute top-8 right-8 z-30"
@@ -65,17 +65,23 @@ const Header = () => {
 
       <nav className="md:flex hidden">
         <Scroll
-          className="md:block font-bold text-lg hover:opacity-80 transition-all mr-8"
+          className="md:block font-bold text-lg hover:opacity-80 transition-all mr-8 cursor-pointer"
           to="aboutMe"
+          smooth="true"
+          duration={400}
+          offset={-50}
         >
           About me
         </Scroll>
-        <a
-          className="md:block font-bold text-lg hover:opacity-80 transition-all"
-          href="#project"
+        <Scroll
+          className="md:block font-bold text-lg hover:opacity-80 transition-all cursor-pointer"
+          to="projects"
+          smooth="true"
+          duration={400}
+          offset={-50}
         >
           Projects
-        </a>
+        </Scroll>
       </nav>
 
       {menuOpen ? (
@@ -175,25 +181,33 @@ const Header = () => {
             </a>
           </div>
           <Scroll
+            to="/"
             className="text-white tracking-widest mt-24 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
-            href="/"
           >
             Home
           </Scroll>
-          <a
+          <Scroll
             className="text-white tracking-widest mt-20 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
-            href="#aboutMe"
+            to="aboutMe"
+            smooth="true"
+            duration={400}
+            offset={-50}
           >
             About me
-          </a>
-          <a
+          </Scroll>
+          <Scroll
             className="text-white tracking-widest mt-20 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
-            href="#project"
+            to="projects"
+            smooth="true"
+            duration={400}
+            offset={-50}
           >
             Projects
-          </a>
+          </Scroll>
         </nav>
-      ) : undefined}
+      ) : (
+        !setMenuOpen
+      )}
     </header>
   );
 };
