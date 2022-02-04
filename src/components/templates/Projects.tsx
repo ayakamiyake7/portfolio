@@ -5,7 +5,10 @@ import ProjectImage from "../../../public/images/image-01.png";
 
 const Projects = () => {
   return (
-    <section className="container mx-auto mt-20 mb-20 px-4 md:px-0">
+    <section
+      id="projects"
+      className="container mx-auto mt-20 mb-20 px-4 md:px-0"
+    >
       <SectionTitle title="Projects" />
       <div className="mt-8">
         <Image src={ProjectImage} alt="Toritada" width={480} height={208} />
