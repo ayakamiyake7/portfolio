@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import SectionTitle from "../atoms/SectionTitle";
-import ProjectImage from "../../../public/images/image-01.png";
 import ProjectSwiper from "../molecules/ProjectSwiper";
 
 const Projects = () => {
