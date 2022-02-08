@@ -10,9 +10,9 @@ const Projects = () => {
       id="projects"
       className="container mx-auto mt-20 mb-20 px-4 md:px-0"
     >
-      <ProjectSwiper />
       <SectionTitle title="Projects" />
       <div className="mt-8">
+        <ProjectSwiper />
         <Image src={ProjectImage} alt="Toritada" width={480} height={208} />
         <div className="flex justify-between items-center bg-yellow px-6 py-3 md:w-[480px]">
           <h3 className="text-base font-bold tracking-widest">
