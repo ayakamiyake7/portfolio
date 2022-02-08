@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import SectionTitle from "../atoms/SectionTitle";
 import ProjectImage from "../../../public/images/image-01.png";
+import ProjectSwiper from "../molecules/ProjectSwiper";
 
 const Projects = () => {
   return (
@@ -11,6 +12,7 @@ const Projects = () => {
     >
       <SectionTitle title="Projects" />
       <div className="mt-8">
+        <ProjectSwiper />
         <Image src={ProjectImage} alt="Toritada" width={480} height={208} />
         <div className="flex justify-between items-center bg-yellow px-6 py-3 md:w-[480px]">
           <h3 className="text-base font-bold tracking-widest">
