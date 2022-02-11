@@ -10,7 +10,7 @@ const Footer = () => {
         <a
           href="https://www.linkedin.com/in/ayaka-miyake/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           <FaLinkedinIn className="w-5 h-5 text-navy" />
         </a>
@@ -18,7 +18,7 @@ const Footer = () => {
         <a
           href="https://github.com/ayakamiyake7/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="ml-4"
         >
           <FaGithub className="w-5 h-5 text-navy" />
@@ -27,7 +27,7 @@ const Footer = () => {
         <a
           href="https://twitter.com/ayakamiyake7"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="ml-4"
         >
           <FaTwitter className="w-5 h-5 text-navy" />
@@ -36,7 +36,7 @@ const Footer = () => {
         <a
           href="mailto:ayakamiyake7@gmail.com"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="ml-4"
         >
           <RiMailFill className="w-5 h-5 text-navy" />
