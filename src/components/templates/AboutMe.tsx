@@ -235,7 +235,7 @@ const AboutMe = () => {
           <a
             href="./CV_ayaka_miyake.pdf"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             className="text-navy font-bold text-lg mx-auto mt-8 block rounded-lg border-4 border-navy w-4/5 py-2 px-6 hover:bg-navy hover:text-white transition"
           >
             Download CV

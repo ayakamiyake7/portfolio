@@ -18,7 +18,7 @@ const MainVisual = () => {
         <a
           href="https://www.linkedin.com/in/ayaka-miyake/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           <FaLinkedinIn className="w-5 h-5 text-white" />
         </a>
@@ -26,7 +26,7 @@ const MainVisual = () => {
         <a
           href="https://github.com/ayakamiyake7/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="ml-4"
         >
           <FaGithub className="w-5 h-5 text-white" />
