@@ -7,7 +7,11 @@ import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
   const handleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+  const handleMenuClose = () => {
     setMenuOpen(!menuOpen);
   };
 
@@ -24,7 +28,10 @@ const Header = () => {
         onClick={handleMenu}
       >
         {menuOpen ? (
-          <RiCloseFill className="w-8 h-8 text-navy" />
+          <RiCloseFill
+            className="w-8 h-8 text-navy"
+            onClick={handleMenuClose}
+          />
         ) : (
           <RiMenu2Line className="w-8 h-8 text-navy" />
         )}
@@ -92,6 +99,7 @@ const Header = () => {
           <Scroll
             to="/"
             className="text-white tracking-widest mt-24 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
+            onClick={handleMenuClose}
           >
             Home
           </Scroll>
@@ -101,6 +109,7 @@ const Header = () => {
             smooth="true"
             duration={400}
             offset={-50}
+            onClick={handleMenuClose}
           >
             About me
           </Scroll>
@@ -110,6 +119,7 @@ const Header = () => {
             smooth="true"
             duration={400}
             offset={-50}
+            onClick={handleMenuClose}
           >
             Projects
           </Scroll>
