@@ -29,7 +29,7 @@ const Header = () => {
       >
         {menuOpen ? (
           <RiCloseFill
-            className="w-8 h-8 text-navy"
+            className="w-8 h-8 text-navy fixed top-8 right-8 z-30"
             onClick={handleMenuClose}
           />
         ) : (
