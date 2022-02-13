@@ -530,28 +530,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
-.right-4 {
-  right: 1rem;
+.top-6 {
+  top: 1.5rem;
 }
 
-.top-4 {
-  top: 1rem;
+.right-6 {
+  right: 1.5rem;
 }
 
-.right-2 {
-  right: 0.5rem;
+.top-5 {
+  top: 1.25rem;
 }
 
-.top-3 {
-  top: 0.75rem;
-}
-
-.right-1 {
-  right: 0.25rem;
-}
-
-.top-1 {
-  top: 0.25rem;
+.right-5 {
+  right: 1.25rem;
 }
 
 .z-30 {
@@ -782,6 +774,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pt-24 {

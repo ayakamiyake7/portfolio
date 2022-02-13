@@ -16,7 +16,7 @@ const Header = () => {
   };
 
   return (
-    <header className="container mx-auto py-8 px-4 md:px-0 md:flex md:justify-between md:items-center">
+    <header className="container mx-auto py-4 px-4 md:px-0 md:flex md:justify-between md:items-center">
       <Link href="/">
         <a className="text-yellow text-2xl font-bold hover:opacity-80 transition-all">
           Ayaka Miyake
@@ -24,12 +24,12 @@ const Header = () => {
       </Link>
 
       <span
-        className="md:hidden absolute top-8 right-8 z-30"
+        className="md:hidden absolute top-5 right-5 z-30"
         onClick={handleMenu}
       >
         {menuOpen ? (
           <RiCloseFill
-            className="w-8 h-8 text-navy fixed top-8 right-8 z-30"
+            className="w-8 h-8 text-navy fixed top-5 right-5 z-30"
             onClick={handleMenuClose}
           />
         ) : (
