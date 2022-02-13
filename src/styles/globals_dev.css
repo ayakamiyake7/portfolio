@@ -514,12 +514,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
-.top-8 {
-  top: 2rem;
+.top-5 {
+  top: 1.25rem;
 }
 
-.right-8 {
-  right: 2rem;
+.right-5 {
+  right: 1.25rem;
 }
 
 .top-0 {
@@ -528,22 +528,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .left-0 {
   left: 0px;
-}
-
-.top-6 {
-  top: 1.5rem;
-}
-
-.right-6 {
-  right: 1.5rem;
-}
-
-.top-5 {
-  top: 1.25rem;
-}
-
-.right-5 {
-  right: 1.25rem;
 }
 
 .z-30 {
@@ -655,6 +639,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .w-8 {
   width: 2rem;
 }
@@ -705,6 +693,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-between {
   justify-content: space-between;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded-full {
@@ -771,24 +763,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2rem;
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.py-7 {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pt-24 {

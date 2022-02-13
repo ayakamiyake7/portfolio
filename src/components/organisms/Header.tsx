@@ -15,6 +15,12 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // const fixedScroll = menuOpen ? (
+  //   <body className="bg-navy">
+
+  //   </body>
+  // ) : ()
+
   return (
     <header className="container mx-auto py-4 px-4 md:px-0 md:flex md:justify-between md:items-center">
       <Link href="/">
@@ -59,71 +65,75 @@ const Header = () => {
       </nav>
 
       {menuOpen ? (
-        <nav className="bg-gradient-to-b from-[#FEAB65] via-[#ECA7A4] to-[#BC98BF] px-5 top-0 left-0 z-20 w-screen h-full fixed">
-          <div className="flex pt-24">
-            <a
-              href="https://www.linkedin.com/in/ayaka-miyake/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedinIn className="w-5 h-5 text-navy" />
-            </a>
+        <body className="overflow-hidden h-screen">
+          {" "}
+          //?
+          <nav className="bg-gradient-to-b from-[#FEAB65] via-[#ECA7A4] to-[#BC98BF] px-5 top-0 left-0 z-20 w-screen h-full fixed">
+            <div className="flex pt-24">
+              <a
+                href="https://www.linkedin.com/in/ayaka-miyake/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn className="w-5 h-5 text-navy" />
+              </a>
 
-            <a
-              href="https://github.com/ayakamiyake7/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-6"
-            >
-              <FaGithub className="w-5 h-5 text-navy" />
-            </a>
+              <a
+                href="https://github.com/ayakamiyake7/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-6"
+              >
+                <FaGithub className="w-5 h-5 text-navy" />
+              </a>
 
-            <a
-              href="https://twitter.com/ayakamiyake7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-6"
-            >
-              <FaTwitter className="w-5 h-5 text-navy" />
-            </a>
+              <a
+                href="https://twitter.com/ayakamiyake7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-6"
+              >
+                <FaTwitter className="w-5 h-5 text-navy" />
+              </a>
 
-            <a
-              href="mailto:ayakamiyake7@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-6"
+              <a
+                href="mailto:ayakamiyake7@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-6"
+              >
+                <RiMailFill className="w-5 h-5 text-navy" />
+              </a>
+            </div>
+            <Scroll
+              to="/"
+              className="text-white tracking-widest mt-24 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
+              onClick={handleMenuClose}
             >
-              <RiMailFill className="w-5 h-5 text-navy" />
-            </a>
-          </div>
-          <Scroll
-            to="/"
-            className="text-white tracking-widest mt-24 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
-            onClick={handleMenuClose}
-          >
-            Home
-          </Scroll>
-          <Scroll
-            className="text-white tracking-widest mt-20 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
-            to="aboutMe"
-            smooth="true"
-            duration={400}
-            offset={-50}
-            onClick={handleMenuClose}
-          >
-            About me
-          </Scroll>
-          <Scroll
-            className="text-white tracking-widest mt-20 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
-            to="projects"
-            smooth="true"
-            duration={400}
-            offset={-50}
-            onClick={handleMenuClose}
-          >
-            Projects
-          </Scroll>
-        </nav>
+              Home
+            </Scroll>
+            <Scroll
+              className="text-white tracking-widest mt-20 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
+              to="aboutMe"
+              smooth="true"
+              duration={400}
+              offset={-50}
+              onClick={handleMenuClose}
+            >
+              About me
+            </Scroll>
+            <Scroll
+              className="text-white tracking-widest mt-20 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
+              to="projects"
+              smooth="true"
+              duration={400}
+              offset={-50}
+              onClick={handleMenuClose}
+            >
+              Projects
+            </Scroll>
+          </nav>
+        </body>
       ) : (
         !setMenuOpen
       )}
