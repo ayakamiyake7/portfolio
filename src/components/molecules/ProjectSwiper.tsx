@@ -2,7 +2,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import Image from "next/image";
-import { FaExternalLinkAlt } from "react-icons/fa";
+
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 import "swiper/css/bundle";
 import "swiper/css/navigation";
@@ -15,19 +16,21 @@ const ProjectSwiper = () => {
       title: "Toritada",
       type: "Website",
       url: "https://toritada.co.jp",
+      gitHub: "",
     },
     {
       src: "/images/image-01.png",
       title: "Todo App",
       type: "App",
-      url: "",
-      gitUrl: "https://github.com/if-tech-support/todo_team_2",
+      url: "https://google.com",
+      gitHub: "https://github.com/if-tech-support/todo_team_2",
     },
     {
       src: "/images/image-01.png",
       title: "Triangle inc.",
       type: "Website",
       url: "https://triangle-pearl.jp/",
+      gitHub: "",
     },
   ];
 
@@ -47,23 +50,49 @@ const ProjectSwiper = () => {
       className="mySwiper"
     >
       {SLIDEDATA.map((data, index: number) => {
+        console.log(`${data.url}`);
+
         return (
           <SwiperSlide key={`${index}`}>
-            <Image src={data.src} width={480} height={208} alt={data.title} />
-            <div className="flex justify-between items-center bg-yellow px-6 py-2">
-              <h3 className="text-base font-bold tracking-widest">
-                {data.title}
-                <span className="text-xs font-medium"> | {data.type}</span>
-              </h3>
-              <a
-                href={data.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-navy rounded-full w-7 h-7 flex items-center justify-center hover:opacity-80 transition-all"
-              >
-                <FaExternalLinkAlt className="text-white" />
-              </a>
-            </div>
+            <a href={`${data.url}`}>
+              <Image
+                src={`${data.src}`}
+                width={480}
+                height={208}
+                alt={`${data.title}`}
+              />
+              <div className="flex justify-between items-center bg-yellow px-6 py-2">
+                <h3 className="text-base font-bold tracking-widest">
+                  {`${data.title}`}
+                  <span className="text-xs font-medium">
+                    {" "}
+                    | {`${data.type}`}
+                  </span>
+                </h3>
+                <div className="flex">
+                  <object>
+                    <a
+                      href={`${data.gitHub}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center hover:opacity-80 transition-all"
+                    >
+                      <FaGithub className="text-navy w-7 h-7" />
+                    </a>
+                  </object>
+                  <object>
+                    <a
+                      href={`${data.url}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-navy rounded-full w-7 h-7 ml-1 flex items-center justify-center hover:opacity-80 transition-all"
+                    >
+                      <FaExternalLinkAlt className="text-white" />
+                    </a>
+                  </object>
+                </div>
+              </div>
+            </a>
           </SwiperSlide>
         );
       })}
