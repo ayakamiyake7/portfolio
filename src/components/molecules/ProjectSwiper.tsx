@@ -61,7 +61,10 @@ const ProjectSwiper = () => {
                 height={208}
                 alt={`${data.title}`}
               />
-              <div className="flex justify-between items-center bg-yellow px-6 py-2">
+            </a>
+
+            <div className="flex justify-between items-center bg-yellow px-6 py-2">
+              <a href={`${data.url}`}>
                 <h3 className="text-base font-bold tracking-widest">
                   {`${data.title}`}
                   <span className="text-xs font-medium">
@@ -69,30 +72,27 @@ const ProjectSwiper = () => {
                     | {`${data.type}`}
                   </span>
                 </h3>
-                <div className="flex">
-                  <object>
-                    <a
-                      href={`${data.gitHub}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center hover:opacity-80 transition-all"
-                    >
-                      <FaGithub className="text-navy w-7 h-7" />
-                    </a>
-                  </object>
-                  <object>
-                    <a
-                      href={`${data.url}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-navy rounded-full w-7 h-7 ml-1 flex items-center justify-center hover:opacity-80 transition-all"
-                    >
-                      <FaExternalLinkAlt className="text-white" />
-                    </a>
-                  </object>
-                </div>
+              </a>
+              <div className="flex">
+                <a
+                  href={`${data.gitHub}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center hover:opacity-80 transition-all"
+                >
+                  <FaGithub className="text-navy w-7 h-7" />
+                </a>
+
+                <a
+                  href={`${data.url}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-navy rounded-full w-7 h-7 ml-1 flex items-center justify-center hover:opacity-80 transition-all"
+                >
+                  <FaExternalLinkAlt className="text-white" />
+                </a>
               </div>
-            </a>
+            </div>
           </SwiperSlide>
         );
       })}
