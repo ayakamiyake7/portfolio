@@ -15,6 +15,7 @@ const ProjectSwiper = () => {
       title: "Toritada",
       src: "/images/image-01.png",
       type: "Website",
+      posts: "posts/toritada",
       url: "https://toritada.co.jp",
       gitHub: "",
     },
@@ -22,6 +23,7 @@ const ProjectSwiper = () => {
       title: "Todo App",
       src: "/images/image-01.png",
       type: "App",
+      posts: "posts/todo-app",
       url: "https://google.com",
       gitHub: "https://github.com/if-tech-support/todo_team_2",
     },
@@ -29,6 +31,7 @@ const ProjectSwiper = () => {
       title: "Triangle inc.",
       src: "/images/image-01.png",
       type: "Website",
+      posts: "posts/triangle",
       url: "https://triangle-pearl.jp/",
       gitHub: "",
     },
@@ -50,11 +53,11 @@ const ProjectSwiper = () => {
       className="mySwiper"
     >
       {SLIDEDATA.map((data, index: number) => {
-        console.log(`${data.url}`);
+        console.log(`${data.posts}`);
 
         return (
           <SwiperSlide key={`${index}`}>
-            <a href={`${data.url}`}>
+            <a href={`${data.posts}`}>
               <Image
                 src={`${data.src}`}
                 width={480}
@@ -64,7 +67,7 @@ const ProjectSwiper = () => {
             </a>
 
             <div className="flex justify-between items-center bg-yellow px-6 py-2">
-              <a href={`${data.url}`}>
+              <a href={`${data.posts}`}>
                 <h3 className="text-base font-bold tracking-widest">
                   {`${data.title}`}
                   <span className="text-xs font-medium">
