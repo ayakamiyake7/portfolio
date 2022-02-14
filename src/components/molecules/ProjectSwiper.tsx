@@ -80,17 +80,21 @@ const ProjectSwiper = () => {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center hover:opacity-80 transition-all"
                 >
-                  <FaGithub className="text-navy w-7 h-7" />
+                  {data.gitHub[index] && (
+                    <FaGithub className="text-navy w-7 h-7" />
+                  )}
                 </a>
 
-                <a
-                  href={`${data.url}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-navy rounded-full w-7 h-7 ml-1 flex items-center justify-center hover:opacity-80 transition-all"
-                >
-                  <FaExternalLinkAlt className="text-white" />
-                </a>
+                {data.gitHub[index] && (
+                  <a
+                    href={`${data.url}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-navy rounded-full w-7 h-7 ml-1 flex items-center justify-center hover:opacity-80 transition-all"
+                  >
+                    <FaExternalLinkAlt className="text-white" />
+                  </a>
+                )}
               </div>
             </div>
           </SwiperSlide>
