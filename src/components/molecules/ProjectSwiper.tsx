@@ -12,22 +12,22 @@ const ProjectSwiper = () => {
   const SLIDEDATA = [
     //constants
     {
-      src: "/images/image-01.png",
       title: "Toritada",
+      src: "/images/image-01.png",
       type: "Website",
       url: "https://toritada.co.jp",
       gitHub: "",
     },
     {
-      src: "/images/image-01.png",
       title: "Todo App",
+      src: "/images/image-01.png",
       type: "App",
       url: "https://google.com",
       gitHub: "https://github.com/if-tech-support/todo_team_2",
     },
     {
-      src: "/images/image-01.png",
       title: "Triangle inc.",
+      src: "/images/image-01.png",
       type: "Website",
       url: "https://triangle-pearl.jp/",
       gitHub: "",
@@ -85,7 +85,7 @@ const ProjectSwiper = () => {
                   )}
                 </a>
 
-                {data.gitHub[index] && (
+                {data.url[index] && (
                   <a
                     href={`${data.url}`}
                     target="_blank"
