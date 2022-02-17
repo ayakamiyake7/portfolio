@@ -1,4 +1,4 @@
-import { createClient, EntryCollection } from "contentful";
+import { ContentfulClientApi, createClient } from "contentful";
 
 import Image from "next/image";
 import Layout from "../../src/components/layout/Layout";
@@ -7,9 +7,9 @@ import SectionTitle from "../../src/components/atoms/SectionTitle";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+const client: ContentfulClientApi = createClient({
+  space: process.env.CONTENTFUL_SPACE_ID as string,
+  accessToken: process.env.CONTENTFUL_ACCESS_KEY as string,
 });
 
 export const getStaticPaths = async () => {

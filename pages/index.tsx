@@ -10,7 +10,7 @@ import { Navigation } from "swiper";
 import "swiper/css/navigation";
 
 import { InferGetStaticPropsType, NextPage } from "next";
-import { createClient, EntryCollection } from "contentful";
+import { ContentfulClientApi, createClient, EntryCollection } from "contentful";
 
 type IFields = {
   title: string;
@@ -21,9 +21,9 @@ type IFields = {
 };
 
 export const getStaticProps = async () => {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  const client: ContentfulClientApi = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID as string,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY as string,
   });
 
   const response: EntryCollection<IFields> = await client.getEntries({
