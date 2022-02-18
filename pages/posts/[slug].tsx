@@ -1,4 +1,4 @@
-import { createClient, EntryCollection } from "contentful";
+import { ContentfulClientApi, createClient, Sys } from "contentful";
 
 import Image from "next/image";
 import Layout from "../../src/components/layout/Layout";
@@ -7,9 +7,9 @@ import SectionTitle from "../../src/components/atoms/SectionTitle";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+const client: ContentfulClientApi = createClient({
+  space: process.env.CONTENTFUL_SPACE_ID as string,
+  accessToken: process.env.CONTENTFUL_ACCESS_KEY as string,
 });
 
 export const getStaticPaths = async () => {
@@ -17,7 +17,7 @@ export const getStaticPaths = async () => {
     content_type: "portfolio",
   });
 
-  const paths = res.items.map((item) => {
+  const paths = res.items.map((item: any) => {
     return {
       params: { slug: item.fields.slug },
     };
@@ -29,7 +29,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params }: { params: any }) => {
   const { items } = await client.getEntries({
     content_type: "portfolio",
     "fields.slug": params.slug,
@@ -39,7 +39,7 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-export default function Projects({ portfolio }) {
+export default function Projects({ portfolio }: { portfolio: any }) {
   console.log(portfolio);
   return (
     <Layout>

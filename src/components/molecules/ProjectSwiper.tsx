@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-const ProjectSwiper = ({ portfolio }) => {
+const ProjectSwiper = ({ portfolio }: { portfolio: any }) => {
   type portfolio = {
     title: string;
   };
