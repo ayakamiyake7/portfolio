@@ -8,8 +8,8 @@ import SectionTitle from "../../src/components/atoms/SectionTitle";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const client: ContentfulClientApi = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID as string,
-  accessToken: process.env.CONTENTFUL_ACCESS_KEY as string,
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID as string,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY as string,
 });
 
 export const getStaticPaths = async () => {

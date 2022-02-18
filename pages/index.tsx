@@ -22,8 +22,8 @@ type IFields = {
 
 export const getStaticProps = async () => {
   const client: ContentfulClientApi = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID as string,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY as string,
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID as string,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY as string,
   });
 
   const response: EntryCollection<IFields> = await client.getEntries({
