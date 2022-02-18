@@ -13,11 +13,11 @@ import { InferGetStaticPropsType, NextPage } from "next";
 import { ContentfulClientApi, createClient, EntryCollection } from "contentful";
 
 type IFields = {
-  title: any;
-  content: any;
-  mainImage: any;
-  image: any;
-  link: any;
+  title: string;
+  content: string;
+  mainImage: string;
+  image: string;
+  link: string;
 };
 
 export const getStaticProps = async () => {
