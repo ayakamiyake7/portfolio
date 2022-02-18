@@ -12,18 +12,18 @@ import "swiper/css/navigation";
 import { InferGetStaticPropsType, NextPage } from "next";
 import { ContentfulClientApi, createClient, EntryCollection } from "contentful";
 
-type IFields = {
-  title: string;
-  content: string;
-  mainImage: string;
-  image: string;
-  link: string;
-};
+// type IFields = {
+//   title: string;
+//   content: string;
+//   mainImage: string;
+//   image: string;
+//   link: string;
+// };
 
 export const getStaticProps = async () => {
   const client: ContentfulClientApi = createClient({
-    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID as string,
-    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY as string,
+    space: process.env.CONTENTFUL_SPACE_ID as string,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY as string,
   });
 
   const response: EntryCollection<IFields> = await client.getEntries({
