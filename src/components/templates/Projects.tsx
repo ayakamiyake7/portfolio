@@ -11,7 +11,7 @@ const Projects = () => {
     >
       <SectionTitle title="Projects" />
       <div className="mt-8">
-        <ProjectSwiper />
+        <ProjectSwiper key={portfolio.sys.id} />
       </div>
     </section>
   );

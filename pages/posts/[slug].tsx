@@ -1,3 +1,5 @@
+import { ContentfulClientApi, createClient, Sys } from "contentful";
+
 import Image from "next/image";
 import Layout from "../../src/components/layout/Layout";
 import Title from "../../src/components/atoms/Title";
@@ -5,7 +7,40 @@ import SectionTitle from "../../src/components/atoms/SectionTitle";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-export default function Projects() {
+const client: ContentfulClientApi = createClient({
+  space: process.env.CONTENTFUL_SPACE_ID as string,
+  accessToken: process.env.CONTENTFUL_ACCESS_KEY as string,
+});
+
+export const getStaticPaths = async () => {
+  const res = await client.getEntries({
+    content_type: "portfolio",
+  });
+
+  const paths = res.items.map((item: any) => {
+    return {
+      params: { slug: item.fields.slug },
+    };
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async ({ params }: { params: any }) => {
+  const { items } = await client.getEntries({
+    content_type: "portfolio",
+    "fields.slug": params.slug,
+  });
+  return {
+    props: { portfolio: items[0] },
+  };
+};
+
+export default function Projects({ portfolio }: { portfolio: any }) {
+  console.log(portfolio);
   return (
     <Layout>
       <section className="container mx-auto mb-20 px-4 md:px-0">

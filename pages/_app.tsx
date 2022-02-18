@@ -1,3 +1,4 @@
+import "swiper/css/bundle";
 import "../src/styles/globals_dev.css";
 import { AppProps } from "next/app";
 
