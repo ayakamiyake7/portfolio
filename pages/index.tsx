@@ -66,7 +66,7 @@ const Home: NextPage<Props> = ({ portfolios }) => {
             }}
             className="mySwiper flex"
           >
-            {portfolios.map((portfolio) => (
+            {portfolios.map((portfolio: any) => (
               <ProjectSwiper key={portfolio.sys.id} portfolio={portfolio} />
             ))}
           </Swiper>
