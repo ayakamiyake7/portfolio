@@ -12,13 +12,13 @@ import "swiper/css/navigation";
 import { InferGetStaticPropsType, NextPage } from "next";
 import { ContentfulClientApi, createClient, EntryCollection } from "contentful";
 
-// type IFields = {
-//   title: string;
-//   content: string;
-//   mainImage: string;
-//   image: string;
-//   link: string;
-// };
+type IFields = {
+  title: any;
+  content: any;
+  mainImage: any;
+  image: any;
+  link: any;
+};
 
 export const getStaticProps = async () => {
   const client: ContentfulClientApi = createClient({
