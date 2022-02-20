@@ -4,13 +4,10 @@ import MainVisual from "../src/components/templates/MainVisual";
 import SectionTitle from "../src/components/atoms/SectionTitle";
 import ProjectSwiper from "../src/components/molecules/ProjectSwiper";
 
-import { Swiper } from "swiper/react";
-import { Navigation } from "swiper";
-
 import "swiper/css/navigation";
 
-import { InferGetStaticPropsType, NextPage } from "next";
-import { ContentfulClientApi, createClient, EntryCollection } from "contentful";
+import { NextPage } from "next";
+import { createClient } from "contentful";
 
 export const getStaticProps = async () => {
   // const client: ContentfulClientApi = createClient({
@@ -31,7 +28,6 @@ export const getStaticProps = async () => {
 };
 
 const Home: NextPage<any> = ({ portfolios }) => {
-  // const Home = () => {
   console.log("portfolios-", portfolios);
 
   return (
@@ -45,15 +41,7 @@ const Home: NextPage<any> = ({ portfolios }) => {
       >
         <SectionTitle title="Projects" />
         <div className="mt-8">
-          {/* {portfolios.map((portfolio: any) => (
-              <ProjectSwiper key={portfolio.sys.id} portfolio={portfolio} />
-            ))} */}
-          {/* {SLIDEDATA.map((data: any, index: number) => { */}
-          {/* {SLIDEDATA.map((data: any, index: number) => { */}
-          {/* <ProjectSwiper data={data} />; */}
           <ProjectSwiper portfolios={portfolios} />
-          {/* console.log("data=", data);
-            })} */}
         </div>
       </section>
     </Layout>
