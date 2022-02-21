@@ -113,7 +113,7 @@ export default function Projects({ portfolio }: { portfolio: any }) {
         })}
 
         <section className="mt-8 md:px-0 md:flex md:justify-between">
-          <div className="md:w-1/2 md:mr-4 mb-4">
+          <div className="md:w-1/2 md:mr-6 md:mb-0 mb-4">
             <Image
               src={`https:${image.fields.file.url}`}
               alt={title}
@@ -132,13 +132,13 @@ export default function Projects({ portfolio }: { portfolio: any }) {
         </section>
 
         {content && (
-          <section className="mt-16 md:px-0 md:flex md:justify-between">
-            <div className="md:w-1/2">
+          <section className="mt-16 md:px-0 flex flex-col md:flex-row md:justify-between">
+            <div className="md:w-1/2 order-last md:order-first">
               <div className="text-base md:text-lg tracking-wider">
                 {documentToReactComponents(content, options)}
               </div>
             </div>
-            <div className="md:w-1/2 md:mr-4 mb-4">
+            <div className="md:w-1/2 md:ml-6 md:mb-0 mb-4 order-first md:order-last">
               <Image
                 src={`https:${image2.fields.file.url}`}
                 alt={title}
