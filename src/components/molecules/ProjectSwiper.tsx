@@ -65,9 +65,7 @@ const ProjectSwiper = ({ portfolios }: { portfolios: any }) => {
           <Link href={`/posts/${portfolio.fields.slug}`}>
             <a>
               <Image
-                src={`http:${portfolio.fields.mainImage.fields.file.url}`}
-                //width={mainImage.fields.file.details.image.width}
-                // height={mainImage.fields.file.details.image.height}
+                src={`https:${portfolio.fields.mainImage.fields.file.url}`}
                 width={480}
                 height={208}
                 alt={portfolio.fields.title}
