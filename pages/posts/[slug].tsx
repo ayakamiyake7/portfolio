@@ -2,12 +2,10 @@ import { ContentfulClientApi, createClient } from "contentful";
 
 import Image from "next/image";
 import Layout from "../../src/components/layout/Layout";
-import Title from "../../src/components/atoms/Title";
 import SectionTitle from "../../src/components/atoms/SectionTitle";
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 
 const client: ContentfulClientApi = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID as string,
@@ -59,7 +57,7 @@ export default function Projects({ portfolio }: { portfolio: any }) {
   const options = {
     renderText: (text: any) => {
       return text
-        .split("<br />")
+        .split("\n")
         .reduce((children: any, textSegment: any, index: any) => {
           return [...children, index > 0 && <br key={index} />, textSegment];
         }, []);
