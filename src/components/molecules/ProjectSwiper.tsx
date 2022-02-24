@@ -63,7 +63,7 @@ const ProjectSwiper = ({ portfolios }: { portfolios: any }) => {
       {portfolios.map((portfolio: any) => (
         <SwiperSlide key={portfolio.sys.id}>
           <Link href={`/posts/${portfolio.fields.slug}`}>
-            <a>
+            <a className="block leading-[0]">
               <Image
                 src={`https:${portfolio.fields.mainImage.fields.file.url}`}
                 width={480}
