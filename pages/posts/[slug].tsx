@@ -101,15 +101,7 @@ export default function Projects({ portfolio }: { portfolio: any }) {
             </a>
           )}
         </div>
-        {skills.map((skill: any) => {
-          return (
-            <span key={skill} className="text-lg">
-              {skills.join(" / ")}
-              {console.log(skill)}
-            </span>
-          );
-        })}
-
+        <span className="text-lg">{skills.join(" / ")}</span>
         <section className="mt-8 md:px-0 md:flex md:justify-between">
           <div className="md:w-1/2 md:mr-6 md:mb-0 mb-4">
             <Image
@@ -128,7 +120,6 @@ export default function Projects({ portfolio }: { portfolio: any }) {
             </div>
           </div>
         </section>
-
         {content && (
           <section className="mt-16 md:px-0 flex flex-col md:flex-row md:justify-between">
             <div className="md:w-1/2 order-last md:order-first">
