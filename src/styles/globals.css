@@ -10,3 +10,11 @@
 .swiper-button-prev:after {
   color: #003f63;
 }
+
+.overflowHidden {
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
