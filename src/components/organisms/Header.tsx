@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { Link as Scroll } from "react-scroll";
 
 import { RiCloseFill, RiMailFill, RiMenu2Line } from "react-icons/ri";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
@@ -10,9 +9,11 @@ const Header = () => {
 
   const handleMenu = () => {
     setMenuOpen(!menuOpen);
+    document.querySelector("body")?.classList.add("overflowHidden");
   };
   const handleMenuClose = () => {
     setMenuOpen(!menuOpen);
+    document.querySelector("body")?.classList.remove("overflowHidden");
   };
 
   return (
@@ -23,39 +24,28 @@ const Header = () => {
         </a>
       </Link>
 
-      <span
-        className="md:hidden absolute top-8 right-8 z-30"
-        onClick={handleMenu}
-      >
+      <span className="md:hidden absolute top-8 right-8 z-30">
         {menuOpen ? (
           <RiCloseFill
             className="w-8 h-8 text-navy"
             onClick={handleMenuClose}
           />
         ) : (
-          <RiMenu2Line className="w-8 h-8 text-navy" />
+          <RiMenu2Line className="w-8 h-8 text-navy" onClick={handleMenu} />
         )}
       </span>
 
       <nav className="md:flex hidden">
-        <Scroll
-          className="md:block font-bold text-lg hover:opacity-80 transition-all mr-8 cursor-pointer"
-          to="aboutMe"
-          smooth="true"
-          duration={400}
-          offset={-50}
-        >
-          About me
-        </Scroll>
-        <Scroll
-          className="md:block font-bold text-lg hover:opacity-80 transition-all cursor-pointer"
-          to="projects"
-          smooth="true"
-          duration={400}
-          offset={-50}
-        >
-          Projects
-        </Scroll>
+        <Link href="/#aboutMe">
+          <a className="md:block font-bold text-lg hover:opacity-80 transition-all mr-8 cursor-pointer">
+            About me
+          </a>
+        </Link>
+        <Link href="/#projects">
+          <a className="md:block font-bold text-lg hover:opacity-80 transition-all cursor-pointer">
+            Projects
+          </a>
+        </Link>
       </nav>
 
       {menuOpen ? (
@@ -96,33 +86,30 @@ const Header = () => {
               <RiMailFill className="w-5 h-5 text-navy" />
             </a>
           </div>
-          <Scroll
-            to="/"
-            className="text-white tracking-widest mt-24 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
-            onClick={handleMenuClose}
-          >
-            Home
-          </Scroll>
-          <Scroll
-            className="text-white tracking-widest mt-20 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
-            to="aboutMe"
-            smooth="true"
-            duration={400}
-            offset={-50}
-            onClick={handleMenuClose}
-          >
-            About me
-          </Scroll>
-          <Scroll
-            className="text-white tracking-widest mt-20 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
-            to="projects"
-            smooth="true"
-            duration={400}
-            offset={-50}
-            onClick={handleMenuClose}
-          >
-            Projects
-          </Scroll>
+          <Link href="/">
+            <a
+              className="text-white tracking-widest mt-24 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
+              onClick={handleMenuClose}
+            >
+              Home
+            </a>
+          </Link>
+          <Link href="/#aboutMe">
+            <a
+              className="text-white tracking-widest mt-20 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
+              onClick={handleMenuClose}
+            >
+              About me
+            </a>
+          </Link>
+          <Link href="/#projects">
+            <a
+              className="text-white tracking-widest mt-20 block font-bold text-4xl md:text-lg md:hover:opacity-80 md:transition-all md:mr-8"
+              onClick={handleMenuClose}
+            >
+              Projects
+            </a>
+          </Link>
         </nav>
       ) : (
         !setMenuOpen
