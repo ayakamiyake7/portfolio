@@ -14,10 +14,10 @@ const AboutMe = () => {
         <div className="w-full md:w-3/5 mb-10 md:mb-0">
           <SectionTitle title="About me" />
           <p className="tracking-widest text-base leading-8 mt-8 mb-6 md:text-lg">
-            I’m a front-end developer from Japan, currently based in London. In
-            the past, I have worked at web design companies and created some web
-            sites with my team members while working in Japan. I love to learn
-            new things.
+            I am a front-end developer from Japan, currently based in London. I
+            have a wealth of web-design and creation experience gained while
+            working for web design companies in Japan. I am highly driven and
+            love to learn new things.
           </p>
 
           <Title title="Skills" />
