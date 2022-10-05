@@ -44,14 +44,14 @@ const AboutMe = () => {
                 height={48}
               />
             </li>
-            <li className="mr-2 mt-2">
+            {/* <li className="mr-2 mt-2">
               <Image
                 src="/images/jquery.png"
                 alt="jQuery"
                 width={48}
                 height={48}
               />
-            </li>
+            </li> */}
             <li className="mr-2 mt-2">
               <Image
                 src="/images/react.png"
@@ -76,38 +76,38 @@ const AboutMe = () => {
                 height={48}
               />
             </li>
-            <li className="mr-2 mt-2">
+            {/* <li className="mr-2 mt-2">
               <Image
                 src="/images/chakra.png"
                 alt="Chakra UI"
                 width={48}
                 height={48}
               />
-            </li>
-            <li className="mr-2 mt-2">
+            </li> */}
+            {/* <li className="mr-2 mt-2">
               <Image
                 src="/images/tailwindcss.png"
                 alt="Tailwind CSS"
                 width={48}
                 height={48}
               />
-            </li>
-            <li className="mr-2 mt-2">
+            </li> */}
+            {/* <li className="mr-2 mt-2">
               <Image
                 src="/images/vercel.png"
                 alt="Vercel"
                 width={48}
                 height={48}
               />
-            </li>
-            <li className="mr-2 mt-2">
+            </li> */}
+            {/* <li className="mr-2 mt-2">
               <Image
                 src="/images/firebase.png"
                 alt="Firebase"
                 width={48}
                 height={48}
               />
-            </li>
+            </li> */}
           </ul>
           <ul className="text-base flex flex-wrap mt-5">
             <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
@@ -119,9 +119,9 @@ const AboutMe = () => {
             <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
               JavaScript (ES6)
             </li>
-            <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
+            {/* <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
               jQuery
-            </li>
+            </li> */}
             <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
               React
             </li>
@@ -131,7 +131,7 @@ const AboutMe = () => {
             <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
               Typescript
             </li>
-            <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
+            {/* <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
               Chakra UI
             </li>
             <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
@@ -142,7 +142,7 @@ const AboutMe = () => {
             </li>
             <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
               Firebase
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="text-center">
