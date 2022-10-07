@@ -1,10 +1,8 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import { Navigation } from "swiper";
 import { createClient } from "contentful";
 
 export const getStaticProps = async () => {
@@ -50,17 +48,19 @@ const Projects = ({ portfolios }: { portfolios: any }) => {
       //     spaceBetween: 40,
       //   },
       // }}
-      className="flex"
+      // className="grid grid-cols-2	gap-2"
+      className="projects-list"
     >
       {portfolios.map((portfolio: any) => (
-        <li key={portfolio.sys.id}>
+        <li key={portfolio.sys.id} className="projects-list--item">
           <Link href={`/posts/${portfolio.fields.slug}`}>
             <a className="block leading-[0]">
-              <Image
+              <img
                 src={`https:${portfolio.fields.mainImage.fields.file.url}`}
-                width={480}
-                height={208}
+                // width={"40vw"}
+                // height={208}
                 alt={portfolio.fields.title}
+                className="w-full"
               />
             </a>
           </Link>

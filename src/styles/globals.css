@@ -18,3 +18,13 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Projects */
+.projects-list {
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  gap: 6rem;
+}
+.projects-list--item {
+  width: 40vw;
+}
