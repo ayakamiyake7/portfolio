@@ -72,8 +72,6 @@ export default function Projects({ portfolio }: { portfolio: any }) {
             src={`https:${mainImage.fields.file.url}`}
             width={mainImage.fields.file.details.image.width}
             height={mainImage.fields.file.details.image.height}
-            // width="900"
-            // height="342"
             layout="responsive"
             objectFit={"cover"}
             alt={title}
@@ -110,8 +108,6 @@ export default function Projects({ portfolio }: { portfolio: any }) {
               layout="responsive"
               width={image.fields.file.details.image.width}
               height={image.fields.file.details.image.height}
-              // width={388}
-              // height={216}
             />
           </div>
           <div className="md:w-1/2">
@@ -132,10 +128,8 @@ export default function Projects({ portfolio }: { portfolio: any }) {
                 src={`https:${image2.fields.file.url}`}
                 alt={title}
                 layout="responsive"
-                width={image.fields.file.details.image.width}
-                height={image.fields.file.details.image.height}
-                // width={388}
-                // height={216}
+                width={image2.fields.file.details.image.width}
+                height={image2.fields.file.details.image.height}
               />
             </div>
           </section>
