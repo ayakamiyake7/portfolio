@@ -36,29 +36,13 @@ const Projects = ({ portfolios }: { portfolios: any }) => {
   // const id = portfolio.sys.id;
 
   return (
-    <ul
-      // spaceBetween={50}
-      // slidesPerView={1}
-      // modules={[Navigation]}
-      // navigation
-      // loop
-      // breakpoints={{
-      //   768: {
-      //     slidesPerView: 3,
-      //     spaceBetween: 40,
-      //   },
-      // }}
-      // className="grid grid-cols-2	gap-2"
-      className="projects-list"
-    >
+    <ul className="projects-list">
       {portfolios.map((portfolio: any) => (
         <li key={portfolio.sys.id} className="projects-list--item">
           <Link href={`/posts/${portfolio.fields.slug}`}>
             <a className="block leading-[0]">
               <img
-                src={`https:${portfolio.fields.mainImage.fields.file.url}`}
-                // width={"40vw"}
-                // height={208}
+                src={`https:${portfolio.fields.thumbnail.fields.file.url}`}
                 alt={portfolio.fields.title}
                 className="w-full"
               />
