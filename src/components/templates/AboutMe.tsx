@@ -4,6 +4,21 @@ import ProfileImage from "../../../public/images/image-profile.png";
 import SectionTitle from "../atoms/SectionTitle";
 import Title from "../atoms/Title";
 
+const skillsSet = [
+  { name: "HTML5", image: "/images/html5.png" },
+  { name: "CSS3", image: "/images/css3.png" },
+  { name: "SCSS", image: "/images/scss.png" },
+  { name: "JavaScript (ES6)", image: "/images/javascript.png" },
+  // {name: 'jQuery', image: '/images/jquery.png'},
+  { name: "React", image: "/images/react.png" },
+  { name: "Next.js", image: "/images/nextjs.png" },
+  { name: "Typescript", image: "/images/typescript.png" },
+  // {name: 'Chakra UI', image: '/images/chakra.png'},
+  // {name: 'Tailwind CSS', image: '/images/tailwindcss.png'},
+  // {name: 'Vercel', image: '/images/vercel.png'},
+  // {name: 'Firebase', image: '/images/firebase.png'},
+];
+
 const AboutMe = () => {
   return (
     <>
@@ -22,127 +37,28 @@ const AboutMe = () => {
 
           <Title title="Skills" />
           <ul className="flex flex-wrap">
-            <li className="mr-2 mt-2">
-              <Image
-                src="/images/html5.png"
-                alt="HTML5"
-                width={48}
-                height={48}
-              />
-            </li>
-            <li className="mr-2 mt-2">
-              <Image src="/images/css3.png" alt="CSS3" width={48} height={48} />
-            </li>
-            <li className="mr-2 mt-2">
-              <Image src="/images/scss.png" alt="SCSS" width={48} height={48} />
-            </li>
-            <li className="mr-2 mt-2">
-              <Image
-                src="/images/javascript.png"
-                alt="JavaScript"
-                width={48}
-                height={48}
-              />
-            </li>
-            {/* <li className="mr-2 mt-2">
-              <Image
-                src="/images/jquery.png"
-                alt="jQuery"
-                width={48}
-                height={48}
-              />
-            </li> */}
-            <li className="mr-2 mt-2">
-              <Image
-                src="/images/react.png"
-                alt="React.js"
-                width={48}
-                height={48}
-              />
-            </li>
-            <li className="mr-2 mt-2">
-              <Image
-                src="/images/nextjs.png"
-                alt="Next.js"
-                width={48}
-                height={48}
-              />
-            </li>
-            <li className="mr-2 mt-2">
-              <Image
-                src="/images/typescript.png"
-                alt="Typescript"
-                width={48}
-                height={48}
-              />
-            </li>
-            {/* <li className="mr-2 mt-2">
-              <Image
-                src="/images/chakra.png"
-                alt="Chakra UI"
-                width={48}
-                height={48}
-              />
-            </li> */}
-            {/* <li className="mr-2 mt-2">
-              <Image
-                src="/images/tailwindcss.png"
-                alt="Tailwind CSS"
-                width={48}
-                height={48}
-              />
-            </li> */}
-            {/* <li className="mr-2 mt-2">
-              <Image
-                src="/images/vercel.png"
-                alt="Vercel"
-                width={48}
-                height={48}
-              />
-            </li> */}
-            {/* <li className="mr-2 mt-2">
-              <Image
-                src="/images/firebase.png"
-                alt="Firebase"
-                width={48}
-                height={48}
-              />
-            </li> */}
+            {skillsSet.map((skill) => {
+              return (
+                <li className="mr-2 mt-2" key={skill.name}>
+                  <Image
+                    src={skill.image}
+                    alt={skill.name}
+                    width={48}
+                    height={48}
+                  />
+                </li>
+              );
+            })}
           </ul>
           <ul className="text-base flex flex-wrap mt-5">
-            <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
-              HTML5 / CSS3
-            </li>
-            <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
-              Sass
-            </li>
-            <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
-              JavaScript (ES6)
-            </li>
-            {/* <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
-              jQuery
-            </li> */}
-            <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
-              React
-            </li>
-            <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
-              Next.js
-            </li>
-            <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
-              Typescript
-            </li>
-            {/* <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
-              Chakra UI
-            </li>
-            <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
-              Tailwind CSS
-            </li>
-            <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
-              Vercel
-            </li>
-            <li className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto">
-              Firebase
-            </li> */}
+            {skillsSet.map((skill) => (
+              <li
+                className="w-1/2 md:w-1/3 relative pl-4 before:w-3 before:h-3 before:bg-yellow before:inline-block before:absolute before:left-0 before:top-0 before:bottom-0 before:m-auto"
+                key={skill.name}
+              >
+                {skill.name}
+              </li>
+            ))}
           </ul>
         </div>
         <div className="text-center">
