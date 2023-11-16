@@ -11,8 +11,6 @@ const MainVisual = () => {
       </h1>
       <span className="text-white text-2xl block text-center tracking-wider mb-4 leading-2 after:absolute after:inline-block after:w-px after:h-16 after:bg-white after:left-0 after:right-0 after:m-auto after:bottom-10">
         Front-end Developer
-        <br />
-        Based in the UK
       </span>
       <div className="flex justify-center px-4">
         <a
